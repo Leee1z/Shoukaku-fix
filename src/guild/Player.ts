@@ -231,8 +231,8 @@ export class Player extends EventEmitter {
         return {
             guildId: this.guildId,
             playerOptions: {
-                track: { 
-                    encoded: this.track 
+                track: {
+                    encoded: this.track
                 },
                 position: this.position,
                 paused: this.paused,
@@ -467,6 +467,8 @@ export class Player extends EventEmitter {
         }
 
         await this.node.rest.updatePlayer(data);
+
+        if (!noReplace) this.paused = false;
 
         if (playerOptions.filters) {
             const filters = { ...this.filters, ...playerOptions.filters };

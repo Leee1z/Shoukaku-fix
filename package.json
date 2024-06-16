@@ -1,5 +1,5 @@
 {
-  "name": "shoukaku",
+  "name": "shoukaku-fix",
   "version": "4.0.1",
   "description": "A stable and updated wrapper around Lavalink",
   "main": "dist/index.js",
